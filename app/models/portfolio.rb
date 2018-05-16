@@ -1,2 +1,3 @@
 class Portfolio < ApplicationRecord
+
 end
