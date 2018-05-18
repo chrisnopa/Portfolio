@@ -1,9 +1,22 @@
 
 <h1>Edit thisPortfolio item</h1>
+<%= form_with(model: @portfolio_item, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
 
-<%@portfolio_items.each do |portfolio_item| %>
-  <p><%= portfolio_item.title %></p>
-  <p><%= portfolio_item.subtitle %></p>
-  <p><%= portfolio_item.body %></p>
-  <p><%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %></p>
+  <div class="field">
+    <%= form.label :subtitle %>
+    <%= form.text_area :subtitle %>
+
+  </div>  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
 <% end %>
