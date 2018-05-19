@@ -1,4 +1,5 @@
-class CreateFriendlyIdSlugs < ActiveRecord::Migration
+class CreateFriendlyIdSlugs < ActiveRecord::Migration[5.2]
+  def change
   def change
     create_table :friendly_id_slugs do |t|
       t.string   :slug,           :null => false
@@ -12,4 +13,5 @@ class CreateFriendlyIdSlugs < ActiveRecord::Migration
     add_index :friendly_id_slugs, [:slug, :sluggable_type, :scope], :unique => true
     add_index :friendly_id_slugs, :sluggable_type
   end
+end
 end
