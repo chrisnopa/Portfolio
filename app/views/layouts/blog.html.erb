@@ -1,28 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title><%= @page_title %></title>
-  <%= csrf_meta_tags %>
-
-  <meta name="keywords" content= "<%=@seo_keywords%>">
-  <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-</head>
-
-<body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <% if current_user.is_a?(User) %>
-  <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-  <% else %>
-  <%= link_to "Log in", new_user_session_path%>
-  <%= link_to "Registration",new_user_registration_path%>
-  <% end %>
-  <%= yield %>
-  <%= render 'shared/navbar', location: 'bottom' %>
-  <% if session[:source] %>
-  <p>Thanks for visiting me from <%=session[:source]  %></p>
-  <% end %>
-</body>
+  <head>
+    <title><%= @page_title %></title>
+    <%= csrf_meta_tags %>
+    <meta name="keywords" content= "<%=@seo_keywords%>">
+    <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= login_helper %>
+    <%= yield %>
+    <%= render 'shared/navbar', location: 'bottom' %>
+    <% if session[:source] %>
+      <p>Thanks for visiting me from <%=session[:source]  %></p>
+    <% end %>
+  </body>
 </html>
-
