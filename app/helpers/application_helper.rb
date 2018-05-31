@@ -1,11 +1,11 @@
 module ApplicationHelper
-  def login_helper
+  def login_helper style
     if current_user.is_a?(GuestUser)
-      (link_to "Log in", new_user_session_path) +
-        "<br>".html_safe +
-        (link_to "Registration",new_user_registration_path)
+      (link_to "Log in", new_user_session_path, class: 'nav-link') +
+        "".html_safe +
+        (link_to "Registration",new_user_registration_path, class: 'nav-link')
     else
-      link_to "Log out", destroy_user_session_path, method: :delete
+      link_to "Log out", destroy_user_session_path, method: :delete, class: 'nav-link'
     end
   end
 
@@ -15,4 +15,8 @@ module ApplicationHelper
       content_tag(:p, greeting)
     end
   end
+
+  # def copyright_generator
+  #   DevcampViewTool::Renderer.copyright 'Christophe Panon'
+  # end
 end
