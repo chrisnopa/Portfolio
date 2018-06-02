@@ -1,9 +1,10 @@
+
 <div class="card" >
   <div class="card-body">
     <div class="row">
       <div class="form-group"></div>
       <div class="col-md-8">
-        <h2>Edit <%= resource_name.to_s.humanize %></h2>
+        <h3>Edit <%= resource_name.to_s.humanize %></h3>
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
           <%= devise_error_messages! %>
           <div class="form-group">
@@ -36,12 +37,16 @@
           <div class="actions">
             <%= f.submit "Update", class: "btn btn-primary" %>
           </div>
-          <%= link_to "Back", :back, class: 'auth-links' %>
         <% end %>
+        <div class="auth-links">
+          <%= link_to "Back", :back %>
+        </div>
       </div>
       <div class="col-md-4">
-        <h3>Cancel my account</h3>
-        <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-danger' %></p>
+        <div class="cancel-class">
+          <h3>Cancel my account</h3>
+          <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-danger' %></p>
+        </div>
       </div>
     </div>
   </div>
