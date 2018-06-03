@@ -11,16 +11,6 @@
   </head>
   <body>
     <!-- Start of nav -->
-    <div class="nav-scroller py-1 mb-2">
-      <nav class="nav d-flex justify-content-between">
-        <a class="p-2 text-muted" href="#">World</a>
-        <a class="p-2 text-muted" href="#">U.S.</a>
-        <a class="p-2 text-muted" href="#">Technology</a>
-        <a class="p-2 text-muted" href="#">Design</a>
-        <a class="p-2 text-muted" href="#">Culture</a>
-        <a class="p-2 text-muted" href="#">Business</a>
-      </nav>
-    </div>
     <!-- End of nav -->
     <!-- Start of blog header -->
     <!--     <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
@@ -33,10 +23,9 @@
     <!-- End of blog header -->
     <!-- Start of container and row element -->
     <div class="container">
+    <%= render 'shared/blog_nav' %>
       <div class="row">
         <!-- Start of container and row element -->
-        <%= login_helper %>
-        <%= yield %>
         <!-- start of sidebar -->
         <aside class="col-md-4 blog-sidebar">
           <div class="p-3 mb-3 bg-light rounded">
@@ -70,17 +59,17 @@
           </div>
         </aside>
         <!-- End of sidebar -->
-        <!-- start of footer0 -->
-        <footer class="blog-footer">
-          <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-          <p>
-            <a href="#">Back to top</a>
-          </p>
-        </footer>
-        <!-- End of footer -->
         <%= source_helper("blog") %>
+        <%= yield %>
         <%= render 'shared/navbar', location: 'bottom' %>
+
       </div>
+      <footer class="blog-footer">
+        <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+        <p>
+          <a href="#">Back to top</a>
+        </p>
+      </footer>
     </div>
   </body>
 </html>
