@@ -83,6 +83,8 @@ GEM
     faker (1.8.7)
       i18n (>= 0.7)
     ffi (1.9.23)
+    font-awesome-rails (4.7.0.4)
+      railties (>= 3.2, < 6.0)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
     globalid (0.4.1)
@@ -221,6 +223,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise (~> 4.2)
   faker
+  font-awesome-rails (~> 4.7, >= 4.7.0.4)
   friendly_id (~> 5.1.0)
   htmlbeautifier
   jbuilder (~> 2.5)

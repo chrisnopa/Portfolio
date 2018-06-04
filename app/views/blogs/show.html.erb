@@ -1,6 +1,6 @@
 <div class="col-sm-8 blog-main">
   <h3><%= link_to 'Write a new blog post', new_blog_path if logged_in?(:site_admin) %></h3>
-  <h2><%= @blog.title %></h2>
+  <h4><%= @blog.title %></h4>
   <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin)%> |
   <p><%= @blog.body %></p>
   <%= link_to 'Back', blogs_path %>
