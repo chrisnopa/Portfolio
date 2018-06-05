@@ -1,14 +1,6 @@
-
 <div class="col-md-8 blog-main">
-<%= link_to 'Write a new blog post', new_blog_path if logged_in?(:site_admin) %>
+  <%= paginate @blogs, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm"  %>
   <%= render @blogs %>
-  <!-- <h3 class="pb-3 mb-4 font-italic border-bottom">
-            From the Firehose
-          </h3> -->
-  <!-- /.blog-post -->
-  <nav class="blog-pagination">
-    <a class="btn btn-outline-primary" href="#">Older</a>
-    <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
-  </nav>
+  <%= paginate @blogs, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm"  %>
 </div>
 <!-- /.blog-main -->
