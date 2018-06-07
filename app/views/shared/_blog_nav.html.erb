@@ -1,12 +1,7 @@
-
-  <div class="inner">
-    <h3 class="masthead-brand">Chris</h3>
-    <nav class="nav nav-masthead justify-content-center">
-      <%=link_to "Home", root_path, class:'nav-link'%>
-      <%= link_to "About me", about_me_path, class:'nav-link' %>
-      <%=link_to "Contact", contact_path, class:'nav-link' %>
-      <%= link_to "Blog", blogs_path, class:'nav-link'%>
-      <%= link_to "Portfolio", portfolios_path, class:'nav-link' %>
-      <%= login_helper 'nav-link' %>
-    </nav>
-  </div>
+<div class="inner">
+  <h3 class="masthead-brand">Chris</h3>
+  <nav class="nav nav-masthead justify-content-center">
+    <%= navbar_helper 'nav-link', 'span' %>
+    <%= login_helper 'nav-link' %>
+  </nav>
+</div>
