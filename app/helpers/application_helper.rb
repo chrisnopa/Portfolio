@@ -1,3 +1,4 @@
+
 module ApplicationHelper
   def login_helper style = " "
     if current_user.is_a?(GuestUser)
@@ -18,5 +19,13 @@ module ApplicationHelper
 
   # def copyright_generator
   #   DevcampViewTool::Renderer.copyright 'Christophe Panon'
+  # end
+
+  # def navbar_helper style, tag_type
+  #   nav_links = <<NAV
+  #   <#{tag_type}><a href="#{root_path}" class="#{style}">Home</a></#{tag_type}>
+  #   <#{tag_type}><a href="#{about_me_path}" class="#{style}">About me</a></#{tag_type}>
+  #   NAV
+  #   nav_links.html.safe
   # end
 end
