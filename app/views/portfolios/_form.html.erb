@@ -1,28 +1,34 @@
-
 <%= form_with(model: @portfolio_item, local: true) do |form| %>
-<div class="field">
-  <%= form.label :title %>
-  <%= form.text_field :title %>
-</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= form.label :title %>
+          <%= form.text_field :title, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= form.label :subtitle %>
+          <%= form.text_area :subtitle, class:"form-control" %>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= form.label :body %>
+          <%= form.text_area :body, class:"form-control", rows:10 %>
+        </div>
+      </div>
+      <hr>
+      <div class="col-md-12">
+        <h2>Technologies used :</h2>
+        <%= form.fields_for :technologies do |techonology_form|%>
+          <%= techonology_form.label :name %>
+          <%= techonology_form.text_field :name, class: "form-control" %>
+        <%end%>
+        <div class="form-group">
+          <%= form.submit class: "btn btn-block btn-primary" %>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<div class="field">
-  <%= form.label :subtitle %>
-  <%= form.text_area :subtitle %>
-
-</div>  <div class="field">
-  <%= form.label :body %>
-  <%= form.text_area :body %>
-</div>
-
-<ul>
-  <%= form.fields_for :technologies do |techonology_form|%>
-  <li>
-    <%= techonology_form.label :name %>
-    <%= techonology_form.text_field :name %>
-  </li>
-  <%end%>
-</ul>
-<div class="actions">
-  <%= form.submit %>
-</div>
 <% end %>

@@ -31,7 +31,7 @@ puts "5 skills created"
     subtitle:Faker::Lorem.sentence(3, true) ,
     body:Faker::Lorem.paragraph,
     main_image: "http://placehold.it/600x400",
-    thumb_image:  "http://placehold.it/350x150"
+    thumb_image:  "http://placehold.it/350x200"
   )
 end
 1.times do |portfolio_item|
@@ -40,7 +40,7 @@ end
     subtitle:"Angular",
     body:Faker::Lorem.paragraph,
     main_image: "http://placehold.it/600x400",
-    thumb_image:  "http://placehold.it/350x150"
+    thumb_image:  "http://placehold.it/350x200"
   )
 end
 puts "9 portfolios created"
