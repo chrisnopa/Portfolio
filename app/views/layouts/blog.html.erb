@@ -12,13 +12,13 @@
   <body>
       <%= render 'shared/blog_nav' %>
       <%= render 'shared/blog_header' %>
-    <div class="container">
+    <div class="container blog-main-body">
       <div class="row">
         <%= yield %>
         <%=render 'shared/blog_sidebar'  %>
       </div>
+    </div>
       <%= render 'shared/blog_footer' %>
       <%= source_helper("blog") %>
-    </div>
   </body>
 </html>

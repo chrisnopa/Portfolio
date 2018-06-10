@@ -126,7 +126,7 @@ body {
 }
 .blog-post-title {
   margin-bottom: .25rem;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   word-wrap: break-word;
 }
 .blog-post-meta {
@@ -139,19 +139,26 @@ body {
  */
  .blog-footer {
   padding: 2.5rem 0;
-  color: #999;
+  color: white;
+  background-color:#343A40;
   text-align: center;
-  background-color: #f9f9f9;
   border-top: .05rem solid #e5e5e5;
 }
 .blog-footer p:last-child {
   margin-bottom: 0;
 }
 
-.footer-links {
-  font-size:2rem
+.footer-links a{
+  color:white;
+  padding: 5px;
 }
 
-.list-unstyled {
-  font-size:1.5rem
+// .list-unstyled {
+//   font-size:1.5rem
+// }
+
+.blog-main-body {
+  background-color:#F8F9FA;
+  border-radius: 10px;
+  margin-bottom:25px
 }
