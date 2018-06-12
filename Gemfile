@@ -26,7 +26,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'figaro'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -68,5 +68,5 @@ gem 'bootstrap4-kaminari-views'
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 gem 'carrierwave', '~> 1.2', '>= 1.2.2'
 gem 'mini_magick', '~> 4.8'
-gem 'carrierwave-aws', '~> 1.3'
+# gem 'carrierwave-aws', '~> 1.3'
 gem 'dotenv-rails', '~> 2.4'
