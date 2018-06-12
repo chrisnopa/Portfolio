@@ -1,5 +1,5 @@
 @import "bootstrap";
-
+@import "font-awesome";
 /*
  * Globals
  */
@@ -29,15 +29,18 @@ a:hover {
  * Base structure
  */
 
- html,
- body {
-  height: 100%;
-  // background-color: #333;
-  background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%);
-  font-family: 'Lato', sans-serif;
-}
+//  html,
+//  body {
+//   height: 100%;
+//   // background-color: #333;
+//   background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%);
+//   font-family: 'Lato', sans-serif;
+// }
 
-body {
+html, body {
+  background-image: linear-gradient(to top, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('profile-pictures/palmtree-cover.jpg');
+  height:100vh;
+  // width:auto;
   display: -ms-flexbox;
   display: flex;
   color: #fff;
@@ -46,7 +49,7 @@ body {
 }
 
 .cover-container {
-  max-width: 55rem;
+  max-width: 90%;
 }
 
 
@@ -83,14 +86,14 @@ body {
   border-bottom-color: #fff;
 }
 
-@media (min-width: 48em) {
-  .masthead-brand {
-    float: left;
-  }
-  .nav-masthead {
-    float: right;
-  }
-}
+// @media (min-width: 48em) {
+//   .masthead-brand {
+//     float: left;
+//   }
+//   .nav-masthead {
+//     float: right;
+//   }
+// }
 
 
 /*
@@ -174,3 +177,54 @@ body {
 }
 
 
+
+// Style for contact me page
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:50%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.contact-block {
+  text-align:center;
+}
+
+.contact-page-style {
+  margin-top:30px
+}
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  padding: 15px 40px;
+  display:inline-block;
+  border-radius: 30px;
+  margin-top:20px;
+  transition: all .3s;
+  webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+}
+
+.btn-white {
+  background-color: #E7E9EB;
+  color:#1A1E21;
+  margin-bottom: 30px;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(black,.2);
+}
+
+.btn:active {
+  transform:translateY(-1px);
+  box-shadow: 0 5px 10px rgba(black, .2);
+}
