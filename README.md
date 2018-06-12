@@ -9,3 +9,4 @@ My new Portfolio app project. Created from scratch using :
 * Heroku
 * A bunch of gems
 * Some cofee 
+* Cloudinary (for hosting pictures/videos)
