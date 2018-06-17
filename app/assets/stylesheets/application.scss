@@ -68,9 +68,9 @@ a:hover {
       }
 
 
-.cover-container {
-  max-width: 90%;
-}
+      .cover-container {
+        max-width: 90%;
+      }
 
 
 /*
@@ -289,4 +289,31 @@ a:hover {
 
 .dropdown:hover {
   box-shadow: 0 10px 20px rgba(black,.2);
+}
+
+// Style for about me page paragraph
+
+.vertical-align {
+ position: relative;
+ top: 50%;
+ transform: perspective(1px) translateY(-50%);
+ margin: 0 auto;
+}
+
+.test {
+border-bottom: 3px solid rgba(106,216,106,0.6);
+-webkit-box-shadow: inset 0 -5px 0 rgba(106,216,106,0.38);
+box-shadow: inset 0 -5px 0 rgba(106,216,106,0.38);
+height: 30px;
+display: inline-block;
+}
+
+// style for footer icons
+
+.footer-paragraph i {
+  padding:5px
+}
+
+.footer-links i {
+  padding:5px
 }
