@@ -7,6 +7,7 @@
 
 body {
   background-color: white;
+  font-family: 'Lato', sans-serif;
 }
 
 .row {
@@ -19,12 +20,10 @@ body {
 
 .blog-header {
   line-height: 1;
-  border-bottom: 1px solid red;
   margin-top:7rem;
 }
 
 .blog-header-logo {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
   font-size: 2.25rem;
 }
 
@@ -32,18 +31,20 @@ body {
   text-decoration: none;
 }
 
-// h1, h2, h3, h4, h5, h6 {
-//   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
-// }
-
-// .display-4 {
-//   font-size: 2.5rem;
-// }
-// @media (min-width: 768px) {
-//   .display-4 {
-//     font-size: 3rem;
-//   }
-// }
+.display-4 {
+  font-size: 2.5rem;
+  border-bottom: 1px solid rgba(106, 216, 106, 0.6);
+  box-shadow: inset 0 -13px 0 rgba(106, 216, 106, 0.38);
+  height: 10px;
+  display: inline;
+  -webkit-transition: background .2s ease;
+  transition: background .2s ease;
+}
+@media (min-width: 768px) {
+  .display-4 {
+    font-size: 3rem;
+  }
+}
 
 .nav-scroller {
   position: relative;
@@ -94,21 +95,21 @@ body {
 /*
  * Blog name and description
  */
-//  .blog-title {
-//   margin-bottom: 0;
-//   font-size: 1.5rem;
-//   font-weight: 300;
-// }
-// .blog-description {
-//   font-size: 1.1rem;
-//   color: #999;
-// }
+ .blog-title {
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.blog-description {
+  font-size: 1.1rem;
+  color: #999;
+}
 
-// @media (min-width: 40em) {
-//   .blog-title {
-//     font-size: 3.5rem;
-//   }
-// }
+@media (min-width: 40em) {
+  .blog-title {
+    font-size: 3.5rem;
+  }
+}
 
 /* Pagination */
 .blog-pagination {
@@ -153,9 +154,9 @@ body {
   padding: 5px;
 }
 
-// .list-unstyled {
-//   font-size:1.5rem
-// }
+.list-unstyled {
+  font-size:1.5rem
+}
 
 .blog-main-body {
   background-color:#F8F9FA;
