@@ -7,7 +7,7 @@
 
 body {
   background-color: white;
-  color:black
+  color:black;
 }
 
 :root {
@@ -39,14 +39,6 @@ body {
   max-width: 40rem;
 }
 
-footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-footer p {
-  margin-bottom: .25rem;
-}
 
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
 
@@ -69,3 +61,46 @@ footer p {
 .portfolio-show-page {
   margin-top:11rem
 }
+
+
+
+
+// Style for footer
+
+
+ .blog-footer {
+  padding: 2.5rem 0;
+  color: white;
+  background-color:#343A40;
+  text-align: center;
+  border-top: .05rem solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+
+.footer-links a{
+  color:white;
+  padding: 5px;
+}
+
+.list-unstyled {
+  font-size:1.5rem
+}
+
+.blog-main-body {
+  background-color:#F8F9FA;
+  border-radius: 10px;
+  margin-bottom:25px
+}
+
+
+
+// footer {
+//   padding-top: 3rem;
+//   padding-bottom: 3rem;
+// }
+
+// footer p {
+//   margin-bottom: .25rem;
+// }
