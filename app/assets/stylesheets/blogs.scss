@@ -6,7 +6,12 @@
 
 
 body {
-  background-color: white;
+  background-color: #F4F4F4;
+  font-family: 'Lato', sans-serif;
+
+  & a {
+    color:#212529;
+  }
 }
 
 .row {
@@ -19,31 +24,24 @@ body {
 
 .blog-header {
   line-height: 1;
-  border-bottom: 1px solid red;
   margin-top:7rem;
 }
 
-.blog-header-logo {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
-  font-size: 2.25rem;
+
+.display-4 {
+  font-size: 2.5rem;
+  border-bottom: 1px solid rgba(106, 216, 106, 0.6);
+  box-shadow: inset 0 -13px 0 rgba(106, 216, 106, 0.38);
+  height: 10px;
+  display: inline;
+  -webkit-transition: background .2s ease;
+  transition: background .2s ease;
 }
-
-.blog-header-logo:hover {
-  text-decoration: none;
+@media (min-width: 768px) {
+  .display-4 {
+    font-size: 3rem;
+  }
 }
-
-// h1, h2, h3, h4, h5, h6 {
-//   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
-// }
-
-// .display-4 {
-//   font-size: 2.5rem;
-// }
-// @media (min-width: 768px) {
-//   .display-4 {
-//     font-size: 3rem;
-//   }
-// }
 
 .nav-scroller {
   position: relative;
@@ -88,27 +86,26 @@ body {
 
 .border-top { border-top: 1px solid #e5e5e5; }
 .border-bottom { border-bottom: 1px solid #e5e5e5; }
-
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
 
 /*
  * Blog name and description
  */
-//  .blog-title {
-//   margin-bottom: 0;
-//   font-size: 1.5rem;
-//   font-weight: 300;
-// }
-// .blog-description {
-//   font-size: 1.1rem;
-//   color: #999;
-// }
+ .blog-title {
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.blog-description {
+  font-size: 1.1rem;
+  color: #999;
+}
 
-// @media (min-width: 40em) {
-//   .blog-title {
-//     font-size: 3.5rem;
-//   }
-// }
+@media (min-width: 40em) {
+  .blog-title {
+    font-size: 3.5rem;
+  }
+}
 
 /* Pagination */
 .blog-pagination {
@@ -123,6 +120,12 @@ body {
  */
  .blog-post {
   margin-bottom: 4rem;
+
+  & a {
+    text-decoration: none;
+    opacity: .7;
+  }
+
 }
 .blog-post-title {
   margin-bottom: .25rem;
@@ -134,6 +137,18 @@ body {
   color: #999;
 }
 
+
+// Blog main
+
+.blog-main {
+  background-color:white
+}
+
+//  Blog sidebar
+
+.blog-sidebar {
+  background-color: #F4F4F4;
+}
 /*
  * Footer
  */
@@ -153,12 +168,15 @@ body {
   padding: 5px;
 }
 
-// .list-unstyled {
-//   font-size:1.5rem
-// }
+.list-unstyled {
+  font-size:1.5rem
+}
 
 .blog-main-body {
-  background-color:#F8F9FA;
   border-radius: 10px;
-  margin-bottom:25px
+  margin-bottom:25px;
+}
+
+.rounded {
+  background-color:white;
 }

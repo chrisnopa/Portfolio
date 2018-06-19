@@ -16,40 +16,40 @@ end
   )
 end
 
-5.times do |skill|
-  Skill.create!(
-    title: "Rails #{skill}",
-    percent_utilized:15
-  )
-end
+# 5.times do |skill|
+#   Skill.create!(
+#     title: "Rails #{skill}",
+#     percent_utilized:15
+#   )
+# end
 
-puts "5 skills created"
+# puts "5 skills created"
 
-8.times do |portfolio_item|
-  Portfolio.create!(
-    title:"Portfolio title: #{portfolio_item}" ,
-    subtitle:Faker::Lorem.sentence(3, true) ,
-    body:Faker::Lorem.paragraph,
-    main_image: "http://placehold.it/600x400",
-    thumb_image:  "http://placehold.it/350x200"
-  )
-end
-1.times do |portfolio_item|
-  Portfolio.create!(
-    title:"Portfolio title: #{portfolio_item}" ,
-    subtitle:"Angular",
-    body:Faker::Lorem.paragraph,
-    main_image: "http://placehold.it/600x400",
-    thumb_image:  "http://placehold.it/350x200"
-  )
-end
-puts "9 portfolios created"
+# 8.times do |portfolio_item|
+#   Portfolio.create!(
+#     title:"Portfolio title: #{portfolio_item}" ,
+#     subtitle:Faker::Lorem.sentence(3, true) ,
+#     body:Faker::Lorem.paragraph,
+#     main_image: "http://placehold.it/600x400",
+#     thumb_image:  "http://placehold.it/350x200"
+#   )
+# end
+# 1.times do |portfolio_item|
+#   Portfolio.create!(
+#     title:"Portfolio title: #{portfolio_item}" ,
+#     subtitle:"Angular",
+#     body:Faker::Lorem.paragraph,
+#     main_image: "http://placehold.it/600x400",
+#     thumb_image:  "http://placehold.it/350x200"
+#   )
+# end
+# puts "9 portfolios created"
 
-3.times do |technology|
-  Portfolio.last.technologies.create!(
-    name:"Technology #{technology}"
-    )
-end
+# 3.times do |technology|
+#   Portfolio.last.technologies.create!(
+#     name:"Technology #{technology}"
+#     )
+# end
 
-puts "3 technologies created"
+# puts "3 technologies created"
 

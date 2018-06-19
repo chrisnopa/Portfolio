@@ -1,7 +1,7 @@
 <div class="container portfolio-show-page">
   <div class="row">
     <div class="col-md-7">
-      <%= image_tag @portfolio_item.main_image.to_s, class:"img-fluid", alt:"Responsive image"%>
+      <%= image_tag @portfolio_item.main_image.to_s unless portfolio_item.main_image.nil?, class:"img-fluid", alt:"Responsive image"%>
     </div>
     <div class="col-md-5 item-style">
       <h1><%= @portfolio_item.title %></h1>
