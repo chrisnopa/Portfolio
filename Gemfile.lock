@@ -100,8 +100,6 @@ GEM
     faker (1.8.7)
       i18n (>= 0.7)
     ffi (1.9.23)
-    figaro (1.1.1)
-      thor (~> 0.14)
     font-awesome-rails (4.7.0.4)
       railties (>= 3.2, < 6.0)
     friendly_id (5.1.0)
@@ -274,7 +272,6 @@ DEPENDENCIES
   devise (~> 4.2)
   dotenv-rails (~> 2.4)
   faker
-  figaro
   font-awesome-rails (~> 4.7, >= 4.7.0.4)
   friendly_id (~> 5.1.0)
   htmlbeautifier
