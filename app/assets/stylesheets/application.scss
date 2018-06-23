@@ -29,8 +29,13 @@ a:hover {
  * Base structure
  */
 
- html,
- body {
+ *, *::after, *::before {
+  box-sizing:border-box;
+}
+
+
+html,
+body {
   margin:0;
   height: 100vh;
   // background-color: #333;
@@ -294,9 +299,6 @@ a:hover {
 // Style for about me page paragraph
 
 .vertical-align {
- position: relative;
- top: 50%;
- transform: perspective(1px) translateY(-50%);
  margin: 0 auto;
 }
 
@@ -350,10 +352,6 @@ a:hover {
 
 
 
-
-@import url(https://fonts.googleapis.com/css?family=Varela+Round);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
-
 $profileBg:#fff;
 $skillsBg:#3d3e42;
 $profileColor:#9099a0;
@@ -378,36 +376,16 @@ $time:0.6s;
   }
 }
 
-*, *::after, *::before {
-  box-sizing:border-box;
-}
 
-html,body {
-  height: 100%;
-}
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  font-size:16px;
-  line-height:1.5em;
-}
 a{color:$linkColor; text-decoration:none;}
-.clearfix::after, .clearfix::before {
-  content: " ";
-  display: table;
-}
-.clearfix::after{clear:both;}
-.bold {color:$boldColor; font-weight:400;}
+// .clearfix::after, .clearfix::before {
+//   content: " ";
+//   display: table;
+// }
+// .clearfix::after{clear:both;}
+// .bold {color:$boldColor; font-weight:400;}
 
-.resume-wrapper {
-  position:relative;
-  text-align:center;
-  height:100%;
-}
-
-.container {
-  min-height:600px;
-}
 
 .profile {
   background:$profileBg;
@@ -415,108 +393,106 @@ a{color:$linkColor; text-decoration:none;}
   float:left;
   color:$profileColor;
   @include breakpoint(brother-bear) { width: 100%; }
-  .name-wrapper {
-    float:left;
-    width:60%;
-  }
   h1 {
     font-size:2.5em;
-    text-align:left;
     font-family: 'Varela Round', sans-serif;
     color:$boldColor;
     text-transform:uppercase;
+    text-align:center;
     line-height:1em;
-    padding-top:40px;
     @include breakpoint(mama-bear) {
-       padding-top:20px;
-    }
-    @include breakpoint(baby-bear) {
-      font-size:1.8em;
-      padding-top:20px;
-    }
+     padding-top:20px;
+   }
+   @include breakpoint(baby-bear) {
+    font-size:1.8em;
+    padding-top:20px;
   }
-  li {
-      margin-bottom:10px;
-    }
-  .picture-resume-wrapper {
-    width:40%;
-    display:block;
-    float:left;
-    @include breakpoint(mama-bear) {
-       width:100%;
-    }
-  }
-  .picture-resume {
-    width:220px;
-    height:220px;
-    background-size:cover;
-    border-radius:50%;
-    margin-right:0px;
-    display:table;
+}
+li {
+  margin-bottom:10px;
+}
+.picture-resume-wrapper {
+  width:40%;
+  display:block;
+  float:left;
+  @include breakpoint(mama-bear) {
+   width:100%;
+ }
+}
+.picture-resume {
+  width:220px;
+  height:220px;
+  background-size:cover;
+  border-radius:50%;
+  margin-right:0px;
+  display:table;
+  position:relative;
+  vertical-align:middle;
+  span {
+    display:table-cell;
+    vertical-align: middle;
     position:relative;
-    vertical-align:middle;
-    span {
-        display:table-cell;
-        vertical-align: middle;
-        position:relative;
-        margin:0 auto;
-        z-index:10;
-       text-align:center
-    }
-    img {
-      border-radius:50%;
-      width:130px;
-      @include breakpoint(papa-bear) {
-        width:80px;
-      }
-      @include breakpoint(mama-bear) {
-        width:120px;
-        height:120px;
-      }
-    }
+    margin:0 auto;
+    z-index:10;
+    text-align:center
+  }
+  img {
+    border-radius:50%;
+    width:130px;
     @include breakpoint(papa-bear) {
-      width:150px;
-      height:150px;
+      width:80px;
     }
     @include breakpoint(mama-bear) {
-      width:200px;
-      height:200px;
+      width:120px;
+      height:120px;
     }
-     @include breakpoint(baby-bear) { width:180px;height:180px; }
   }
-  .contact-info{
-    margin-top:100px;
-    font-weight:300;
-    @include breakpoint(mama-bear) {margin-top:70px; }
-    @include breakpoint(baby-bear) { margin-top:50px; }
+  @include breakpoint(papa-bear) {
+    width:150px;
+    height:150px;
   }
-  .list-titles {
-    float:left;
-    text-align:left;
-    font-weight:600;
-    width:40%;
-    color:$boldColor;
+  @include breakpoint(mama-bear) {
+    width:200px;
+    height:200px;
   }
-  .list-content{
-    float:left;
-    width:60%;
-    text-align:left;
-    font-weight:300;
-  }
-  .contact-presentation {
-    text-align:left;
-    font-weight:300;
-    margin-top:100px;
-    margin-bottom:100px;
-    @include breakpoint(mama-bear) {margin-top:70px;margin-bottom:70px; }
-    @include breakpoint(brother-bear) {margin-top:50px;margin-bottom:50px; }
+  @include breakpoint(baby-bear) { width:180px;height:180px; }
+}
+.contact-info{
+  margin-top:100px;
+  font-weight:300;
+  @include breakpoint(mama-bear) {margin-top:70px; }
+  @include breakpoint(baby-bear) { margin-top:50px; }
+}
+.list-titles {
+  float:left;
+  text-align:left;
+  font-weight:600;
+  width:40%;
+  color:$boldColor;
+  list-style: none;
 
-  }
-  svg {
-    width:100%;
-    position:absolute;
-    top:0;
-    left:0;
+}
+.list-content{
+  float:left;
+  width:60%;
+  text-align:left;
+  font-weight:300;
+  list-style: none;
+}
+.contact-presentation {
+  text-align:left;
+  font-weight:300;
+  margin-top:100px;
+  margin-bottom:100px;
+  @include breakpoint(mama-bear) {margin-top:70px;margin-bottom:70px; }
+  @include breakpoint(brother-bear) {margin-top:50px;margin-bottom:50px; }
+
+}
+svg {
+  width:100%;
+  position:absolute;
+  top:0;
+  left:0;
     //display:none;
   }
 
@@ -560,9 +536,9 @@ a{color:$linkColor; text-decoration:none;}
     @include breakpoint(baby-bear) {width:100%;margin-bottom:40px;}
   }
   .experience-title {
-      color:white;
-      margin-bottom:15px;;
-    }
+    color:white;
+    margin-bottom:15px;;
+  }
 }
 
 .section-padding {
@@ -572,7 +548,7 @@ a{color:$linkColor; text-decoration:none;}
 }
 
 .section-wrapper {
-  width:50%;
+  width:100%;
   float:left;
   text-align:left;
   color:$skillsColor;
@@ -627,3 +603,29 @@ a{color:$linkColor; text-decoration:none;}
 @keyframes skill_5 {from {width:0%;}to {width:70%;}}
 @keyframes skill_6 {from {width:0%;}to {width:70%;}}
 @keyframes skill_7 {from {width:0%;}to {width:70%;}}
+
+
+.vertical-align {
+  margin-top:2rem
+}
+
+.cv-container {
+  margin-top:5rem;
+  margin-bottom:3rem;
+}
+
+.section-wrapper ul {
+  list-style:none
+}
+
+.profile-picture {
+  max-width:200px;
+}
+
+.cv-name h1{
+  text-align: center;
+}
+
+.about-text {
+  margin-top:2rem
+}
