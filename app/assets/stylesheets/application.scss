@@ -540,6 +540,12 @@ svg {
     margin-bottom:15px;
     color:#655B5C
   }
+  & h3::after {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid #5B5B5C;
+    margin-top:15px;
+  }
 }
 
 .section-padding {
