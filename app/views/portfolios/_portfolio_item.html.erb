@@ -1,8 +1,8 @@
 <div class="col-lg-4 col-md-6 col-sm-10-offset-2">
   <div class="card mb-4 box-shadow">
-
     <div class="card-body" data-id="<%=portfolio_item.id%>">
       <p class="card-text"><%= portfolio_item.subtitle %></p>
+      <%= image_tag portfolio_item.thumb_image.to_s unless portfolio_item.thumb_image.nil?%>
       <span><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></span>
       <div class="d-flex justify-content-between align-items-center">
       </div>
