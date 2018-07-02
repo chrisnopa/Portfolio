@@ -79,6 +79,10 @@ GEM
       rails (>= 3.1)
     builder (3.2.3)
     byebug (10.0.2)
+    carrierwave (1.2.2)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
     coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -148,6 +152,9 @@ GEM
     marcel (0.3.2)
       mimemagic (~> 0.3.2)
     method_source (0.9.0)
+    mime-types (3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2016.0521)
     mimemagic (0.3.2)
     mini_magick (4.8.0)
     mini_mime (1.0.0)
@@ -260,6 +267,7 @@ DEPENDENCIES
   bootstrap (~> 4.1.1)
   bootstrap4-kaminari-views
   byebug
+  carrierwave (~> 1.2, >= 1.2.2)
   coffee-rails (~> 4.2)
   devise (~> 4.2)
   dotenv-rails (~> 2.4)
