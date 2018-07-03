@@ -27,7 +27,7 @@ class PortfoliosController < ApplicationController
   end
 
   def create
-    @portfolio_item = Portfolio.new(portfolio_params)
+    @portfolio_item = Portfolio.create(portfolio_params)
 
     respond_to do |format|
       if @portfolio_item.save
