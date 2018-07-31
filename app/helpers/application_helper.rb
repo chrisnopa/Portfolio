@@ -3,8 +3,8 @@ module ApplicationHelper
   def login_helper style = " "
     if current_user.is_a?(GuestUser)
       (link_to "Log in", new_user_session_path, class: 'nav-link') +
-        "".html_safe +
-        (link_to "Registration",new_user_registration_path, class: 'nav-link')
+      "".html_safe +
+      (link_to "Registration",new_user_registration_path, class: 'nav-link')
     else
       link_to "Log out", destroy_user_session_path, method: :delete, class: 'nav-link'
     end
@@ -56,4 +56,9 @@ module ApplicationHelper
     "active" if current_page? path
   end
 
+  def show_svg(path)
+    File.open("app/assets/images/#{path}", "rb") do |file|
+      raw file.read
+    end
+  end
 end
