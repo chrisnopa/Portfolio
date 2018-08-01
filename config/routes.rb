@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :comments
   devise_for :users, path: '', path_names: {sign_in:'connexion', sign_out:'deconnexion', sign_up:"inscription"}
   resources :portfolios, except: [:show] do
     put :sort, on: :collection
@@ -15,5 +14,6 @@ Rails.application.routes.draw do
     end
   end
 
+mount ActionCable.Server => '/cable'
 root to: "pages#home"
 end
