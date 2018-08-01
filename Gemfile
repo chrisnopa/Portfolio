@@ -71,3 +71,4 @@ gem "aws-sdk-s3", require: false
 # gem 'cloudinary'
 # gem 'activestorage-cloudinary-service'
 gem 'image_processing', '~> 1.2'
+gem 'cocoon', '~> 1.2', '>= 1.2.11'

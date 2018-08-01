@@ -16,4 +16,3 @@ Rails.application.config.assets.precompile += %w( blogs.scss )
 
 Rails.application.config.assets.precompile += %w( portfolios.scss )
 
-config.assets.precompile += %w( '.svg' )

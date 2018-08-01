@@ -1,7 +1,7 @@
 <div class="container portfolio-show-page">
   <div class="row">
     <div class="col-md-7">
-      <%= image_tag @portfolio_item.main_image.variant(resize: "250X250") unless @portfolio_item.main_image.nil?%>
+      <%= image_tag @portfolio_item.main_image.variant(resize: "400X400") unless @portfolio_item.main_image.nil?%>
     </div>
     <div class="col-md-5 item-style">
       <h1><%= @portfolio_item.title %></h1>
@@ -10,6 +10,11 @@
       <h3>Technologies used:</h3>
       <%@portfolio_item.technologies.each do |t| %>
         <p><%= t.name %></p>
+      <% end %>
+      <% if logged_in?(:site_admin) %>
+      <div class="">
+        <%= link_to "Edit Item", edit_portfolio_path(@portfolio_item), class:'btn btn-warning'%>
+      </div>
       <% end %>
       <%= link_to "View all portfolio items", portfolios_path %>
     </div>

@@ -1,14 +1,15 @@
-<aside class="col-md-4 blog-sidebar d-none d-lg-block d-md-block">
-  <div class="p-3 mb-3 rounded">
-    <h4>About</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id quaerat est laudantium error ?</p>
-  </div>
-
-  <div class="p-3">
-    <h4>Elsewhere</h4>
-    <ol class="list-unstyled">
-      <li><i class="fa fa-github"></i></li>
-      <li><i class="fa fa-linkedin-in"></i></li>
-    </ol>
-  </div>
-</aside>
+<% unless logged_in?(:site_admin)%>
+  <aside class="col-md-4 blog-sidebar d-none d-lg-block d-md-block">
+    <div class="p-3 mb-3 rounded">
+      <h4>About</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id quaerat est laudantium error ?</p>
+    </div>
+    <div class="p-3">
+      <h4>Elsewhere</h4>
+      <ol class="list-unstyled">
+        <li><i class="fa fa-github"></i></li>
+        <li><i class="fa fa-linkedin-in"></i></li>
+      </ol>
+    </div>
+  </aside>
+<%end %>
