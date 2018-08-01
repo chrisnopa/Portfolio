@@ -1,6 +1,9 @@
 class Portfolio < ApplicationRecord
+  # extend FriendlyId
+  # friendly_id :title, use: :slugged
   has_many :technologies, dependent: :destroy
   accepts_nested_attributes_for :technologies,
+                                allow_destroy: true,
                                 reject_if: lambda {|attrs| attrs["name"].blank?}
 
 has_one_attached :main_image
