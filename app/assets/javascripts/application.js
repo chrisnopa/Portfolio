@@ -19,5 +19,6 @@
 //= require html.sortable.js
 //= require cocoon
 //= require gritter
+//= require cable
 //= require popper
 //= require bootstrap-sprockets
