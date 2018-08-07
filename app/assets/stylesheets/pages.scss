@@ -3,3 +3,25 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap";
 @import "font-awesome";
+
+.hr {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  width: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact-block h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.contact-block h4 {
+    font-size: 20px;
+    opacity: 0.9;
+    font-weight: lighter;
+
+    & i {
+      margin-left:40px
+    }
+  }
