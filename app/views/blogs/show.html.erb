@@ -3,7 +3,7 @@
   <h4><%= @blog.title %></h4>
   <p><%= @blog.topic.title %></p>
     <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin)%> |
-  <p><%= @blog.body %></p>
+  <p><%= markdown @blog.body %></p>
     <%= link_to 'Back', blogs_path, class: 'btn btn-secondary btn-lg' %>
     <%= render 'comments/comment_form' %>
   <div id="comments" data-blog-id="<%= @blog.id %>">
