@@ -4,7 +4,7 @@
   <nav class="breadcrumb">
     <%= link_to "Home", root_path, class: 'breadcrumb-item' %>
     <%= link_to @blog.topic.title, topic_path(@blog.topic), class: 'breadcrumb-item' %>
-
+    <%= link_to 'Back', blogs_path, class: 'btn btn-secondary' %>
     <span class="breadcrumb-item active"><%= @blog.title %></span>
 
     <span class="pull-right">
@@ -15,7 +15,6 @@
   <p><%= @blog.topic.title %></p>
     <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin)%> |
   <p><%= markdown @blog.body %></p>
-    <%= link_to 'Back', blogs_path, class: 'btn btn-secondary btn-lg' %>
     <%= render 'comments/comment_form' %>
   <div id="comments" data-blog-id="<%= @blog.id %>">
     <%= render @blog.comments %>
