@@ -5,6 +5,7 @@
     <% if logged_in?(:site_admin)  %>
       <h4 class="btn btn-primary"><%= link_to 'Write a new blog post', new_blog_path if logged_in?(:site_admin) %></h4>
       <h4 class="btn btn-primary"><%= link_to 'Topics', topics_path if logged_in?(:site_admin) %></h4 class="btn btn-primary">
+      <h4 class="btn btn-primary"> <%= link_to 'Back', blogs_path%></h4>
   <% end %>
   </div>
 </div>
