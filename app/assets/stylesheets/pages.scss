@@ -3,3 +3,34 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap";
 @import "font-awesome";
+
+.hr {
+
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-block h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(106, 216, 106, 0.6);
+  box-shadow: inset 0 -13px 0 rgba(106, 216, 106, 0.38);
+  height: 10px;
+  display: inline;
+}
+
+.contact-block h4 {
+    font-size: 20px;
+    opacity: 0.9;
+    font-weight: lighter;
+
+    & i {
+      margin-left:40px
+    }
+  }
+.hr-content {
+
+}
