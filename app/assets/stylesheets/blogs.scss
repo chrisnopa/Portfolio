@@ -180,3 +180,31 @@ body {
 .rounded {
   background-color:white;
 }
+
+.btn-medium {
+  color: #999999;
+  border: 1px solid #999999;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.8;
+  display:inline-block;
+  margin-right: 20px
+}
+.btn-medium:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: #999999!important;
+}
+
+.blog-buttons {
+  display:flex;
+  justify-content:flex-start;
+  flex-wrap:wrap;
+  align-items:stretch
+}
+
+.blogcrumb a {
+  font-size: 1.25em;
+  margin: 0px 10px 0px 10px;
+}

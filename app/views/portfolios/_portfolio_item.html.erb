@@ -6,16 +6,10 @@
               <h4><%= portfolio_item.title %></h4>
             </span>
             <p class="card-text"><%= portfolio_item.subtitle %></p>
-            <%= image_tag portfolio_item.thumb_image.variant(resize: "200X200") unless portfolio_item.thumb_image.nil?%>
+            <%= image_tag portfolio_item.thumb_image, width:'100%'%>
             <div class="d-flex justify-content-between align-items-center">
             </div>
           </div>
       <% end %>
     </div>
   </div>
-
-
-<div class="col-md-3 col-sm-3 col-xs-6">
-    <%= link_to image_tag("placeimg_350_350_nature.jpg", alt: "placeholder image 1",
-                                          class: "img-responsive")  %>
-</div>
