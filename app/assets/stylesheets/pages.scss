@@ -1,11 +1,7 @@
-// Place all the styles related to the Pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap";
 @import "font-awesome";
 
 .hr {
-
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   max-width: 300px;
   margin: 0 auto;
@@ -13,29 +9,15 @@
   margin-bottom: 1rem;
 }
 
-// .contact-block h3 {
-//   font-size: 20px;
-//   text-transform: uppercase;
-//   border-bottom: 1px solid rgba(106, 216, 106, 0.6);
-//   box-shadow: inset 0 -13px 0 rgba(106, 216, 106, 0.38);
-//   height: 10px;
-//   display: inline;
-// }
 
 .contact-block h4 {
     font-size: 20px;
     opacity: 0.9;
     font-weight: lighter;
-
-    & i {
-      margin-left:40px
-    }
   }
 .hr-content {
 
 }
-
-
 
 .card-container {
   color: black;
@@ -50,25 +32,27 @@
   font-weight:lighter
 }
 
-.work-border {
-      text-transform: uppercase;
+.work-border{
+  font-size: 20px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(106, 216, 106, 0.6);
+  box-shadow: inset 0 -13px 0 rgba(106, 216, 106, 0.38);
+  height: 28px;
+  display: inline;
 }
 
-
-
-
-h3.no-span {
-  word-break: break-word;
-    display: table;
-    white-space: nowrap;
-    &:before, &:after {
-      border-top: 1px solid rgba(0, 0, 0, 0.1);
-      content: '';
-      display: table-cell;
-      position: relative;
-      top: 0.5em;
-      width: 50%;
-    }
-    &:before { right: 1.5%; }
-    &:after { left: 1.5%; }
-}
+// h3.no-span {
+//   word-break: break-word;
+//     display: table;
+//     white-space: nowrap;
+//     &:before, &:after {
+//       border-top: 1px solid rgba(0, 0, 0, 0.1);
+//       content: '';
+//       display: table-cell;
+//       position: relative;
+//       top: 0.5em;
+//       width: 50%;
+//     }
+//     &:before { right: 1.5%; }
+//     &:after { left: 1.5%; }
+// }
