@@ -88,9 +88,12 @@ Rails.application.configure do
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
-    config.logger    = ActiveSupport::TaggedLogging.new(logger)
+    config.logger = ActiveSupport::TaggedLogging.new(logger)
   end
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.action_cable.allowed_request_origins = ['https://chrisnopa-my-site.herokuapp.com', 'http://chrisnopa-my-site.herokuapp.com']
+config.action_cable.url = "wss://devcamp-portfolio.herokuapp.com/cable"
 end
