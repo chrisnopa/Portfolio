@@ -6,12 +6,12 @@ class Portfolio < ApplicationRecord
                                 allow_destroy: true,
                                 reject_if: lambda {|attrs| attrs["name"].blank?}
 
+
 has_one_attached :main_image
 has_one_attached :thumb_image
   # include Placeholder
-  validates_presence_of :title, :body, :thumb_image, :main_image
-  # mount_uploader :thumb_image, PortfolioUploader
-  # mount_uploader :main_image, PortfolioUploader
+  validates_presence_of :title, :body, :thumb_image, :main_image, :image_type
+
 
   def self.angular
     where(subtitle:"Angular")
@@ -24,11 +24,17 @@ has_one_attached :thumb_image
 
   scope :ruby_on_rails_portfolio_items, -> {where(subtitle:"Ruby on Rails")}
 
+  private
 
-  # after_initialize :set_defaults
+  def image_type
+    if main_image.attached? == false || thumb_image.attached? == false
+      errors.add(:image, 'are missing!')
+    end
+    # images.each do |image|
+    #   if !image.content_type.in?(%('image/jpg image/png'))
+    #     errors.add(:image, 'needs to a be a JPEG or a PNG')
+    #   end
+    # end
+  end
 
-  # def set_defaults
-  #   self.main_image ||= Placeholder.image_generator(height:"600", width:"400")
-  #   self.thumb_image ||=Placeholder.image_generator(height:"350", width:"200")
-  # end
 end
