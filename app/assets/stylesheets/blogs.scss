@@ -154,6 +154,7 @@ body {
  */
  .blog-footer {
   padding: 2.5rem 0;
+  margin-top:20px;
   color: white;
   background-color:#343A40;
   text-align: center;
@@ -213,3 +214,15 @@ body {
 // .blog-nav-perso {
 //   font-size:large
 // }
+
+
+// comments card
+
+.comment-card > .card {
+  margin-top:15px;
+}
+
+.comment-attribution {
+  font-size:.8em;
+  font-style: italic;
+}
