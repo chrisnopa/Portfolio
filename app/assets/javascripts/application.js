@@ -17,6 +17,8 @@
 //= require activestorage
 //= require cocoon
 //= require gritter
+//= require lib/typed
+//= require typed-implementation
 //= require popper
 //= require cable
 //= require turbolinks
