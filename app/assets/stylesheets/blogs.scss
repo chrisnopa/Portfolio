@@ -226,3 +226,20 @@ body {
   font-size:.8em;
   font-style: italic;
 }
+
+// reading time style
+
+.wordcount {
+  align-items: center;
+  border: 1px solid grey;
+  border-radius: Calc((0.65rem + 0.5rem + 8px) / 2);
+  display: inline;
+  font-size: .8rem;
+  justify-content: center;
+  padding: 0.25rem 0.6rem;
+  i {
+    font-size: 0.8rem;
+    margin-right: 0.25rem;
+    padding-top: 0.15rem;
+  }
+}
