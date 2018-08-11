@@ -4,9 +4,9 @@
     <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.</p>
     <% if logged_in?(:site_admin)  %>
       <div class="blog-buttons">
-        <h4><%= link_to 'Write a new blog post', new_blog_path, class:"btn-medium" %></h4>
-        <h4><%= link_to 'Topics', topics_path, class:"btn-medium"%></h4>
-        <h4> <%= link_to 'Back', blogs_path, class:"btn-medium"%></h4>
+        <h5><%= link_to 'Write a new blog post', new_blog_path, class:"btn-medium" %></h5>
+        <h5><%= link_to 'Topics', topics_path, class:"btn-medium"%></h5>
+        <h5> <%= link_to 'Back', blogs_path, class:"btn-medium"%></h5>
       </div>
   <% end %>
   </div>

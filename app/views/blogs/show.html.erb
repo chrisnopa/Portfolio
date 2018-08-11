@@ -10,17 +10,17 @@
       <%= link_to fa_icon('pencil-square-o'), edit_blog_path(@blog) if logged_in?(:site_admin) %>
       <%= link_to fa_icon('trash'), @blog, method: :delete, data: { confirm: 'Are you sure you want to delete this post?' } if logged_in?(:site_admin) %>
     </span>
-</nav>
-<div class="wordcount">
-  <i class="fa fa-clock-o"></i>
-  <span><%=pluralize(@blog.reading_time, 'minute')%></span>
-</div>
+  </nav>
+  <div class="wordcount">
+    <i class="fa fa-clock-o"></i>
+    <span><%=pluralize(@blog.reading_time, 'minute')%></span>
+  </div>
 
   <p><%= @blog.topic.title %></p>
 
-    <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin)%> |
+  <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin)%> |
   <p><%= markdown @blog.body %></p>
-    <%= render 'comments/comment_form' %>
+  <%= render 'comments/comment_form' %>
   <div id="comments" data-blog-id="<%= @blog.id %>">
     <%= render @blog.comments %>
   </div>
