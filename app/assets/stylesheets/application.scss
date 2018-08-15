@@ -219,10 +219,10 @@ body {
 .btn-home:visited {
   text-decoration: none;
   font-weight:lighter;
-  padding: 15px 40px;
+  padding: 10px 40px;
   display:inline-block;
   border-radius: 30px;
-  margin-top:20px;
+  margin-top:40px;
   transition: all .3s;
   webkit-backface-visibility: hidden;
   -webkit-transform: translateZ(0) scale(1.0, 1.0);
@@ -304,6 +304,22 @@ body {
 
 .footer-links i {
   padding:5px
+}
+
+.center-block {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #4C6776;
+  margin-top: -15px;
+  width: 230px;
+}
+.text-center {
+  text-align: center;
+}
+
+.inner hr {
+  border-top: 1px solid #aaa;
+  margin: 0;
 }
 
 // Style for Heading on homepage
