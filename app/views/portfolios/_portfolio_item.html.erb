@@ -1,15 +1,20 @@
 <div class="col-lg-4 col-md-6 col-sm-10-offset-2">
   <div class="card mb-4 box-shadow">
-      <%= link_to portfolio_show_path(portfolio_item) do %>
-          <div class="card-body" data-id="<%=portfolio_item.id%>">
-            <span>
-              <h4><%= portfolio_item.title %></h4>
-            </span>
-            <p class="card-text"><%= portfolio_item.subtitle %></p>
-            <%= image_tag portfolio_item.thumb_image, width:'100%'%>
-            <div class="d-flex justify-content-between align-items-center">
-            </div>
+    <%= link_to portfolio_show_path(portfolio_item) do %>
+    <% end %>
+    <div class="example-1 new-card">
+      <div class="wrapper">
+        <div class="image">
+        <%= image_tag portfolio_item.thumb_image, width:'100%'%>
+
+        </div>
+<!--         <div class="data">
+          <div class="content">
+            <h1 class="title"><%= portfolio_item.title %></h1>
+            <p class="text"><%= portfolio_item.subtitle %></p>
           </div>
-      <% end %>
+        </div> -->
+      </div>
     </div>
   </div>
+</div>

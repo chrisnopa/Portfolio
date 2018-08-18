@@ -141,7 +141,8 @@ body {
 // Blog main
 
 .blog-main {
-  background-color:white
+  background-color:white;
+  padding:20px;
 }
 
 //  Blog sidebar
@@ -191,7 +192,7 @@ body {
   opacity: 0.8;
   display:inline-block;
   margin-right: 20px;
-   flex-grow:1;
+  flex-grow:1;
 }
 .btn-medium:hover {
   opacity: 1;
@@ -235,11 +236,45 @@ body {
   border-radius: Calc((0.65rem + 0.5rem + 8px) / 2);
   display: inline;
   font-size: .8rem;
+  font-weight:lighter;
   justify-content: center;
-  padding: 0.25rem 0.6rem;
+  padding: 0.25rem 0.8rem;
   i {
     font-size: 0.8rem;
     margin-right: 0.25rem;
     padding-top: 0.15rem;
   }
+}
+
+.button {
+  display: inline;
+  width: 100px;
+  margin: 2em auto 1em;
+  text-align: center;
+  font-size: 15px;
+  // color: black;
+  // line-height: 1;
+  position: relative;
+  font-weight: lighter;
+  padding-right: 20px;
+  &::after {
+    content: '\2192';
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    transition: all 0.3s;
+  }
+  &:hover {
+    &::after {
+      transform: translate(5px, -50%);
+      opacity: 1;
+    }
+  }
+}
+
+
+.breadcrumb {
+  margin-top:1rem;
 }

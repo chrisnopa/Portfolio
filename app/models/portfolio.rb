@@ -10,7 +10,7 @@ class Portfolio < ApplicationRecord
 has_one_attached :main_image
 has_one_attached :thumb_image
   # include Placeholder
-  validates_presence_of :title, :body, :thumb_image, :main_image, :image_type
+  validates_presence_of :title, :body, :thumb_image, :main_image
 
 
   def self.angular
@@ -30,11 +30,11 @@ has_one_attached :thumb_image
     if main_image.attached? == false || thumb_image.attached? == false
       errors.add(:image, 'are missing!')
     end
-    # images.each do |image|
-    #   if !image.content_type.in?(%('image/jpg image/png'))
-    #     errors.add(:image, 'needs to a be a JPEG or a PNG')
-    #   end
-    # end
+    images.each do |image|
+      if !image.content_type.in?(%('image/jpg image/png'))
+        errors.add(:image, 'needs to a be a JPEG or a PNG')
+      end
+    end
   end
 
 end

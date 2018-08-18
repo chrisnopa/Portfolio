@@ -13,12 +13,11 @@
   </nav>
   <div class="wordcount">
     <i class="fa fa-clock-o"></i>
-    <span><%=pluralize(@blog.reading_time, 'minute')%></span>
+    <span><%=pluralize(@blog.reading_time, 'minute')%> reading</span>
   </div>
 
-  <p><%= @blog.topic.title %></p>
 
-  <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin)%> |
+  <%= link_to 'Edit |', edit_blog_path(@blog) if logged_in?(:site_admin)%>
   <p><%= markdown @blog.body %></p>
   <%= render 'comments/comment_form' %>
   <div id="comments" data-blog-id="<%= @blog.id %>">
