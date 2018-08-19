@@ -8,9 +8,13 @@
 body {
   background-color: #F4F4F4;
   font-family: 'Lato', sans-serif;
+  font-size:300;
 
   & a {
     color:#212529;
+  }
+  & a:hover {
+    color:rgba(106, 216, 106, 1);
   }
 }
 
@@ -128,7 +132,7 @@ body {
 
 }
 .blog-post-title {
-  margin-bottom: .25rem;
+  margin-bottom: .50rem;
   font-size: 1.5rem;
   word-wrap: break-word;
 }
@@ -277,4 +281,16 @@ body {
 
 .breadcrumb {
   margin-top:1rem;
+}
+
+
+// Blog sidebar
+
+.light-title {
+  font-weight:lighter;
+  border-bottom: 1px solid rgba(106, 216, 106, 0.6);
+  box-shadow: inset 0 -1px 0 rgba(106, 216, 106, 0.38);
+  height: 10px;
+  display: inline;
+  transition: background .2s ease;
 }
