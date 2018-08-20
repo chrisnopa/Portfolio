@@ -141,6 +141,9 @@ body {
   color: #999;
 }
 
+.pull-right {
+  margin-left:15px;
+}
 
 // Blog main
 
@@ -223,13 +226,24 @@ body {
 
 // comments card
 
+ // * Custom styles
+ // */
+
+.social-links li {
+  font-size: 2.5em;
+}
+
 .comment-card > .card {
-  margin-top:15px;
+  margin-top: 15px;
 }
 
 .comment-attribution {
-  font-size:.8em;
+  font-size: .8em;
   font-style: italic;
+}
+
+.comment-name {
+  font-weight: 600;
 }
 
 // reading time style
@@ -293,4 +307,8 @@ body {
   height: 10px;
   display: inline;
   transition: background .2s ease;
+}
+
+.topic-list:hover {
+  text-decoration:none;
 }

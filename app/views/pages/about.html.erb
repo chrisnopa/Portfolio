@@ -1,18 +1,45 @@
-
 <div class="container-fluid cv-container">
   <div class="row">
-    <div class="col-lg-4 col-md-6 profile section-padding">
+    <div class="col-lg-6 col-md-6 profile section-padding">
       <div class="name-wrapper">
         <h1>Christophe Panon</h1>
         <!-- YOUR NAME AND LAST NAME  -->
       </div>
       <%= image_tag 'profile-pictures/chris-alumni.jpg', width:300, alt:"profile image", style: "border-radius:50%", class:'img-fluid profile-picture'%>
       <div class="about-text">
-        <h3 class="about-me-border"> About me  </h3>
-        <p class="vertical-align">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus accusantium veniam laudantium excepturi autem cum nisi non voluptates doloremque dolores. Earum voluptatum quam velit, accusantium quae. Facilis consequuntur molestiae incidunt.</p>
+        <main class="bio-sidebar">
+          <input id="tab1" type="radio" name="tabs" checked>
+          <label for="tab1">About me</label>
+          <input id="tab2" type="radio" name="tabs">
+          <label for="tab2">Project management</label>
+          <input id="tab3" type="radio" name="tabs">
+          <label for="tab3">Communication</label>
+          <input id="tab4" type="radio" name="tabs">
+          <label for="tab4">UX Design</label>
+          <section id="content1">
+            <p class="bio-items">
+              Experienced in Ruby on Rails, HTML, CSS and Javascript. Spent one year abroad training my Spanish and living a teacher experience. Eager to continue developing my skills in programming and UX as a junior fullstack web developer.
+            </p>
+          </section>
+          <section id="content2">
+            <p class="bio-items">
+              Acquired consulting skills working as a project manager. My goal was to understand and challenge the clients' needs, suggest solutions, and develop the final product that would help him prioritize its assets. More infos on my <strong><a href="https://www.linkedin.com/in/christophepanon/">Linkedin account</a>.</strong>
+            </p>
+          </section>
+          <section id="content3">
+            <p class="bio-items">
+              Fluent in English and getting better in Spanish, that I practice on a daily basis. French is my native language. I also studied Arabic for two years during my University studies.
+            </p>
+          </section>
+          <section id="content4">
+            <p class="bio-items">
+              Notions of UX Design and information architecture.
+            </p>
+          </section>
+        </main>
       </div>
     </div>
-    <div class="col-lg-8 col-md-6 experience section-padding">
+    <div class="col-lg-6 col-md-6 experience section-padding">
       <h3 class="experience-title"><i class="fa fa-briefcase job-icon"></i>Experience</h3>
       <div class="experience-wrapper">
         <div class="company-wrapper clearfix">

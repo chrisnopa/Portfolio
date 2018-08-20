@@ -3,6 +3,7 @@
 @import "gritter";
 @import "pages";
 @import "contact";
+@import 'components/index';
 /*
  * Globals
  */
@@ -359,7 +360,7 @@ $skillsBg:#F7F7F9;
 $profileColor:#9099a0;
 $skillsColor:#9099a0;
 $linkColor:#909BB8;
-$percentageColor:#66d60a;
+$percentageColor:rgba(106, 216, 106, 0.6);
 $boldColor:#7F8A92;
 $time:0.6s;
 
@@ -629,6 +630,7 @@ svg {
 
 .profile-picture {
   max-width:200px;
+  margin-bottom:20px;
 }
 
 .cv-name h1{
