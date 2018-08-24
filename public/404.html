@@ -20,9 +20,14 @@
   }
   h1 {
     font-size: 500;
-    line-height: 1;
     color: #252427;
-    font-weight: 700;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(106, 216, 106, 0.6);
+    box-shadow: inset 0 -9px 0 rgba(106, 216, 106, 0.38);
+    height: 10px;
+    display: inline;
+    -webkit-transition: background .2s ease;
+    transition: background .2s ease;
   }
   h2 {
     font-size: 500;
@@ -39,7 +44,7 @@
     display: inline-block;
     padding: 10px;
     color: #1B1A1A;
-    font-weight: 700;
+    font-weight: lighter;
     border: solid 2px #e7e7e7;
     text-decoration: none;
     font-size: 16px;
@@ -66,12 +71,11 @@
   <div class="container">
     <a href="/"><img src="images/404.jpg" style="width:400px; height:400px;"></a>
     <h2>404</h2>
-    <hr>
-    <h1>Woops,page not found.</h1>
+    <h1>Woops, page not found.</h1>
 
     <p>I'm sorry but it appears that the page you were looking for is not here. Usually this occurs because of a page that previously existed was removed or you’ve mistyped the address.</p>
 
-    <span class="go-back text-center"><a href="#">Go back to homepage</a></span>
+    <span class="go-back text-center"><a href="/">Go back to homepage</a></span>
   </div>
 
 </body>
