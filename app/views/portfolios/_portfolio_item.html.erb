@@ -1,19 +1,25 @@
 <div class="col-lg-4 col-md-6 col-sm-10-offset-2">
+
   <div class="card mb-4 box-shadow">
-      <%= link_to portfolio_show_path(portfolio_item) do %>
-          <div class="card-body" data-id="<%=portfolio_item.id%>">
-            <span>
-              <h4><%= portfolio_item.title %></h4>
-            </span>
-            <p class="card-text"><%= portfolio_item.subtitle %></p>
-            <%= image_tag portfolio_item.thumb_image, width:'100%'%>
-            <div class="d-flex justify-content-between align-items-center">
-            </div>
-          </div>
+    <%= link_to portfolio_show_path(portfolio_item) do %>
+    <!--       <div class="card__image border-tlr-radius"> -->
+      <%= image_tag portfolio_item.thumb_image, width:'100%'%>
+      <!--       </div> -->
+      <div class="card__content card__padding">
+        <div class="card__share">
+          <a id="share" class="share-toggle share-icon" href="#"></a>
+        </div>
+        <div class="card__meta time">
+          <time><p><%=portfolio_item.created_at.strftime("Created on %m/%d/%Y")  %></p></time>
+        </div>
+        <article class="card__article">
+          <h2 id="item-title"><%= portfolio_item.title %></h2>
+          <p class="card-text"><%= portfolio_item.subtitle %></p>
+        </article>
+      </div>
       <% end %>
     </div>
   </div>
-
 <!--
 <div class="row">
   <div class="example-1 card">
@@ -26,4 +32,4 @@
       </div>
     </div>
   </div>
- -->
+-->
