@@ -15,10 +15,10 @@
     <% if logged_in?(:site_admin) %>
     <div class="portfolio-buttons">
       <span>
-        <%= link_to "Edit Item", edit_portfolio_path(@portfolio_item), class:'portfolio-btn-medium'%>
+        <%= link_to "Edit Item", edit_portfolio_path(@portfolio_item), class:'btn-medium'%>
       </span>
       <span>
-        <%= link_to "View all portfolio items", portfolios_path, class:'portfolio-btn-medium' %>
+        <%= link_to "View all portfolio items", portfolios_path, class:'btn-medium' %>
       </span>
     <% end %>
     </div>

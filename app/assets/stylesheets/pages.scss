@@ -11,10 +11,10 @@
 
 
 .contact-block h4 {
-    font-size: 20px;
-    opacity: 0.9;
-    font-weight: lighter;
-  }
+  font-size: 20px;
+  opacity: 0.9;
+  font-weight: lighter;
+}
 .hr-content {
 
 }
@@ -73,7 +73,7 @@
 main .bio-sidebar{
   margin: 0 auto;
   background: #fff;
-    display:flex;
+  display:flex;
   flex-wrap: wrap ;
   align-items:stretch
 }
@@ -106,8 +106,8 @@ label:before {
 
 label[for*='1']:before { content: '\f007'; }
 label[for*='2']:before { content: '\f17d'; }
-label[for*='3']:before { content: '\f1b3'; }
-label[for*='4']:before { content: '\f10e'; }
+label[for*='3']:before { content: '\f10e'; }
+label[for*='4']:before { content: '\f1b3'; }
 
 label:hover {
   color: #888;
@@ -130,8 +130,23 @@ input:checked + label {
 
 .bio-items {
   text-align:justify;
+  margin-top:20px;
   & a:hover {
     text-decoration:none;
     color:#888
   }
+}
+
+.education-title {
+  content: " ";
+  display: block;
+  border-bottom: 1px solid #7F8A92;
+  margin-top: 15px;
+  color: #909BB8;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  font-weight: 400;
+  padding-bottom: 15px;
 }

@@ -1,17 +1,17 @@
 
-  <aside class="col-md-4 blog-sidebar ">
+  <aside class="col-md-4 blog-sidebar mobile-space ">
     <div class="p-3 mb-3 rounded">
       <h4 class="light-title">About</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id quaerat est laudantium error ?</p>
     </div>
     <div class="p-3">
-      <h4 class="light-title">Topics</h4>
+      <h4 class="light-title blog-light">Topics</h4>
       <% @side_bar_topics.each do |topic| %>
         <p><%= link_to topic.title, topic_path(topic), class:'topic-list' %></p>
       <% end %>
     </div>
     <div class="p-3">
-      <h4 class="light-title">Elsewhere</h4>
+      <h4 class="light-title blog-light">Elsewhere</h4>
       <ol class="list-unstyled">
         <li><a href="https://github.com/chrisnopa/"><i class="fa fa-github"></i></a></li>
         <li><a href="https://www.linkedin.com/in/christophepanon/"><i class="fa fa-linkedin"></i></a></li>

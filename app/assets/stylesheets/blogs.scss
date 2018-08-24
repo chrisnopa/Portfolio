@@ -114,9 +114,11 @@ body {
 /* Pagination */
 .blog-pagination {
   margin-bottom: 4rem;
+  color:red!important
 }
 .blog-pagination > .btn {
   border-radius: 2rem;
+  color:red!important
 }
 
 /*
@@ -311,4 +313,8 @@ body {
 
 .topic-list:hover {
   text-decoration:none;
+}
+
+@media screen and (max-width: 767px) {
+.mobile-space {margin-top:10px;}
 }
