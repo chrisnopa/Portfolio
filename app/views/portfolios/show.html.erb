@@ -6,8 +6,9 @@
     <div class="col-md-5 item-style">
       <h2><%= @portfolio_item.title %></h2>
       <em><%= @portfolio_item.subtitle %></em>
-      <p><%= @portfolio_item.body %></p>
-      <h3>Technologies used:</h3>
+      <hr>
+      <p class="item-description"><%= @portfolio_item.body %></p>
+      <h4>Technologies used:</h4>
       <%@portfolio_item.technologies.each do |t| %>
       <p><%= t.name %></p>
       <% end %>
